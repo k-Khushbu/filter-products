@@ -7,6 +7,8 @@ import products from "./db/data";
 import Card from "./components/Card";
 import './index.css'
 
+// import { useSelector } from "react-redux";
+
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [query, setQuery] = useState("");
@@ -21,7 +23,7 @@ function App() {
     (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
 
-  // ----------- Radio Filtering -----------
+  // ----------- Radio Filtering ----------- 
   const handleChange = (event) => {
     setSelectedCategory(event.target.value);
   };
